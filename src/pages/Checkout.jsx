@@ -1,13 +1,11 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import useCartStore from '../store/cartStore';
 import { useNavigate } from 'react-router-dom';
 import { computeTotal } from '../utils/cartUtils'
-import codIcon from '../assets/images/checkout/icon-cash-on-delivery.svg'
-import { ModalContext } from '../context/ModalContext'
-import Modal from '../components/Modal';
+import codIcon from '/assets/images/checkout/icon-cash-on-delivery.svg'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -35,8 +33,8 @@ const schema = yup.object().shape({
 export default function Checkout() {
   const navigate = useNavigate();
   const cart = useCartStore((state) => state.cart);
+  const clearCart = useCartStore((state) => state.clearCart);
   const { total, vat, shipping, overallTotal } = computeTotal(cart);
-  const { isModalOpen, ModalToggle } = useContext(ModalContext);
   const notify = () => toast.success('THANK YOU FOR YOUR ORDER', { autoClose: 3000 });
 
   const {
@@ -51,8 +49,9 @@ export default function Checkout() {
   });
 
   const onSubmit = (data) => {
-    ModalToggle()
     notify()
+    navigate('/confirmation', {state:{cart:cart, overallTotal:overallTotal}})
+    clearCart()
   };
 
   const [selectedMethod, setSelectedMethod] = useState('cod'); 
@@ -172,14 +171,14 @@ export default function Checkout() {
                       <label htmlFor="eMoneyNumber">e-Money Number</label>
                       {errors.eMoneyNumber && <p className='error-message'>{errors.eMoneyNumber.message}</p>}
                     </div>
-                    <input className={errors.zipcode ? 'error' : ''} id="eMoneyNumber" type="text" {...register('eMoneyNumber')} />
+                    <input className={errors.zipcode ? 'error' : ''} placeholder="238521993" id="eMoneyNumber" type="text" {...register('eMoneyNumber')} />
                   </div>
                   <div>
                     <div className="flex-01">
                       <label htmlFor="eMoneyPIN">e-Money PIN</label>
                       {errors.eMoneyPIN && <p className='error-message'>{errors.eMoneyPIN.message}</p>}
                     </div>
-                    <input className={errors.zipcode ? 'error' : ''} id="eMoneyPIN" type="text" {...register('eMoneyPIN')} />
+                    <input className={errors.zipcode ? 'error' : ''} placeholder="6891" id="eMoneyPIN" type="text" {...register('eMoneyPIN')} />
                   </div>
                 </>
               )}
@@ -235,7 +234,6 @@ export default function Checkout() {
         </form>
       </div>
     </div>
-    {isModalOpen ? <Modal open={'openConfirmation'} /> : null}
     </>
   )
 }

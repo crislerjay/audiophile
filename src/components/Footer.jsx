@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/shared/desktop/logo.svg'
-import fb from '../assets/images/shared/desktop/icon-facebook.svg'
-import twitter from '../assets/images/shared/desktop/icon-twitter.svg'
-import ig from '../assets/images/shared/desktop/icon-instagram.svg'
+import logo from '/assets/images/shared/desktop/logo.svg'
+import fb from '/assets/images/shared/desktop/icon-facebook.svg'
+import twitter from '/assets/images/shared/desktop/icon-twitter.svg'
+import ig from '/assets/images/shared/desktop/icon-instagram.svg'
 
 export default function Footer() {
   return (

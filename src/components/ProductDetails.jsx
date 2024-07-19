@@ -1,20 +1,16 @@
 import { useEffect, useState } from 'react';
 import useCartStore from '../store/cartStore';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function ProductDetails({product}) {
   const [quantity, setQuantity] = useState(1)
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const addToCart = useCartStore((state) => state.addToCart);
-  const notify = () => toast.success('Added to cart!', { autoClose: 3000 });
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleClick = (product, quantity) => {
     addToCart(product, quantity)
-    notify()
     setIsButtonDisabled(true)
     setTimeout(() => {
       setIsButtonDisabled(false)

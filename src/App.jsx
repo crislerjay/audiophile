@@ -10,6 +10,7 @@ import Product from './pages/Product';
 import { NavProvider } from './context/NavContext';
 import { ModalProvider } from './context/ModalContext';
 import { ToastContainer } from 'react-toastify';
+import Confirmation from './components/Confirmation';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/category/:slug" element={<Categories />} />
         <Route path="/product/:slug" element={<Product />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmation" element={<Confirmation />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />

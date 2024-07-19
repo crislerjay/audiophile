@@ -1,9 +1,9 @@
 import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/shared/desktop/logo.svg'
-import cartIcon from '../assets/images/shared/desktop/icon-cart.svg'
-import burgerMenu from '../assets/images/shared/tablet/icon-hamburger.svg'
-import burgerMenuClose from '../assets/images/shared/tablet/icon-close-menu.svg'
+import logo from '/assets/images/shared/desktop/logo.svg'
+import cartIcon from '/assets/images/shared/desktop/icon-cart.svg'
+import burgerMenu from '/assets/images/shared/tablet/icon-hamburger.svg'
+import burgerMenuClose from '/assets/images/shared/tablet/icon-close-menu.svg'
 import CategoryList from './CategoryList'
 import { NavContext } from '../context/NavContext'
 import { ModalContext } from '../context/ModalContext'
@@ -39,7 +39,7 @@ export default function Header() {
         </div>
       </div>
       {isNavOpen ?  <div className="menu-wrap"><CategoryList /></div>: null}
-      {isModalOpen ? <Modal open={'openCart'}/> : null}
+      {isModalOpen ? <Modal/> : null}
     </>
   )
 }

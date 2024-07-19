@@ -1,6 +1,6 @@
-import imgDesktop from '../assets/images/shared/desktop/image-best-gear.jpg'
-import imgTablet from '../assets/images/shared/tablet/image-best-gear.jpg'
-import imgMobile from '../assets/images/shared/mobile/image-best-gear.jpg'
+import imgDesktop from '/assets/images/shared/desktop/image-best-gear.jpg'
+import imgTablet from '/assets/images/shared/tablet/image-best-gear.jpg'
+import imgMobile from '/assets/images/shared/mobile/image-best-gear.jpg'
 
 export default function AudioGear() {
   return (

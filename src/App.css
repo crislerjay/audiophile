@@ -201,7 +201,7 @@ btn starts
   font-size: 1.3rem;
   font-weight: var(--fw-bold);
   color: var(--clr-dark-03);
-  background: url('./assets/images/shared/desktop/icon-arrow-right.svg') no-repeat;
+  background: url('/assets/images/shared/desktop/icon-arrow-right.svg') no-repeat;
   background-position: center right;
 }
 
@@ -408,7 +408,7 @@ trending starts
 .trending .trending-item01 {
   padding: 4rem 2.4rem;
   background-color: var(--clr-orange-01);
-  background-image: url('./assets/images/home/desktop/pattern-circles.svg');
+  background-image: url('/assets/images/home/desktop/pattern-circles.svg');
   background-size: 50rem;
   background-position: center -100px;
   background-repeat: no-repeat;
@@ -426,7 +426,7 @@ trending starts
 
 .trending .trending-item02 {
   padding: 10rem 2.4rem;
-  background: url('./assets/images/home/mobile/image-speaker-zx7.jpg') no-repeat;
+  background: url('/assets/images/home/mobile/image-speaker-zx7.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -451,7 +451,7 @@ trending starts
 
 @media (min-width: 576px) {
   .trending .trending-item02 {
-    background: url('./assets/images/home/tablet/image-speaker-zx7.jpg') no-repeat;
+    background: url('/assets/images/home/tablet/image-speaker-zx7.jpg') no-repeat;
     background-size: cover;
   }
 }
@@ -474,7 +474,7 @@ trending starts
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     padding: 13% 5rem;
-    background-image: url(/src/assets/images/home/desktop/pattern-circles.svg);
+    background-image: url('/assets/images/home/desktop/pattern-circles.svg');
     background-size: 70%;
     background-position: left -16% top;
     background-repeat: no-repeat;
@@ -495,7 +495,7 @@ trending starts
   }
   
   .trending .trending-item02 {
-    background: url('./assets/images/home/desktop/image-speaker-zx7.jpg') no-repeat;
+    background: url('/assets/images/home/desktop/image-speaker-zx7.jpg') no-repeat;
     background-size: cover;
   }
 
@@ -538,7 +538,7 @@ trending ends
 Hero starts
 ========================================================================== */
 .hero {
-  background: url('./assets/images/home/mobile/image-hero.jpg') no-repeat;
+  background: url('/assets/images/home/mobile/image-hero.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -576,7 +576,7 @@ Hero starts
 
 @media (min-width: 567px) {
   .hero {
-    background: url('./assets/images/home/tablet/image-hero.jpg') no-repeat;
+    background: url('/assets/images/home/tablet/image-hero.jpg') no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -584,7 +584,7 @@ Hero starts
 
 @media (min-width: 769px) {
   .hero {
-    background: url('./assets/images/home/desktop/image-hero.jpg') no-repeat;
+    background: url('/assets/images/home/desktop/image-hero.jpg') no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -1366,7 +1366,7 @@ confirmation starts
 ========================================================================== */
 .confirmation {
   width: 100%;
-  margin: auto;
+  margin: 15rem auto 0;
   padding: 2.4rem;
   background-color: var(--clr-white);
   border-radius: 8px;
@@ -1404,6 +1404,7 @@ confirmation starts
 @media (min-width: 769px) {
   .confirmation {
     width: 60rem;
+    margin: 18rem auto 0;
   }
 
   .confirmation .purchase {
