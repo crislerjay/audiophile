@@ -1,9 +1,9 @@
-import speakerDesktop from '../assets/images/home/desktop/image-speaker-zx9.png'
-import speakerTablet from '../assets/images/home/tablet/image-speaker-zx9.png'
-import speakerMobile from '../assets/images/home/mobile/image-speaker-zx9.png'
-import earphoneDesktop from '../assets/images/home/desktop/image-earphones-yx1.jpg'
-import earphoneTablet from '../assets/images/home/tablet/image-earphones-yx1.jpg'
-import earphoneMobile from '../assets/images/home/mobile/image-earphones-yx1.jpg'
+import speakerDesktop from '/assets/images/home/desktop/image-speaker-zx9.png'
+import speakerTablet from '/assets/images/home/tablet/image-speaker-zx9.png'
+import speakerMobile from '/assets/images/home/mobile/image-speaker-zx9.png'
+import earphoneDesktop from '/assets/images/home/desktop/image-earphones-yx1.jpg'
+import earphoneTablet from '/assets/images/home/tablet/image-earphones-yx1.jpg'
+import earphoneMobile from '/assets/images/home/mobile/image-earphones-yx1.jpg'
 
 export default function Trending() {
   return (

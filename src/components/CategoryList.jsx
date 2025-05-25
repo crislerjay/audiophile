@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import earphones from '../assets/images/categories/image-category-thumbnail-earphones.png'
-import headphones from '../assets/images/categories/image-category-thumbnail-headphones.png'
-import speakers from '../assets/images/categories/image-category-thumbnail-speakers.png'
+import earphones from '/assets/images/categories/image-category-thumbnail-earphones.png'
+import headphones from '/assets/images/categories/image-category-thumbnail-headphones.png'
+import speakers from '/assets/images/categories/image-category-thumbnail-speakers.png'
 import { NavContext } from '../context/NavContext'
 import { useContext } from 'react'
 
